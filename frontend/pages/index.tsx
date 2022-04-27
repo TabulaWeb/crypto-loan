@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { useState, useEffect } from 'react';
 import Intro from '../components/Intro';
 import Loader from '../components/Loader';
+import Header from '../components/Header';
 import styles from  '../styles/Home.module.css';
 
 const demoAsyncCall = () => {
@@ -38,11 +39,14 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="container">
-      <div className="home">
-        <h1>Главная страница</h1>
+    <>
+      <Header />
+      <div className="container">
+        <div className="home">
+          <h1>Главная страница</h1>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

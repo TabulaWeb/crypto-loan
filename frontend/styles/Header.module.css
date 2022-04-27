@@ -1,0 +1,57 @@
+.header {
+    padding: 15px 0;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 4%;
+    margin: 0 auto;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerNav {
+    display: flex;
+    align-items: center;
+}
+
+.headerNotice {
+    padding: 0 12px;
+    display: flex;
+}
+
+.headerBalance {
+    padding: 0 12px;
+    display: flex;
+}
+
+.headerLogoLink {
+    color: #FFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.headerProfile {
+    position: relative;
+    padding-left: 12px;
+}
+
+.headerProfileIcon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7E4DA9;
+    border-radius: 100%;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+}

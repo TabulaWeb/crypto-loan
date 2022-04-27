@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 import { useState, useEffect } from 'react';
 import Intro from '../components/Intro';
+import Loader from '../components/Loader';
+import styles from  '../styles/Home.module.css';
 
 const demoAsyncCall = () => {
   return new Promise<void>((resolve) => setTimeout(() => resolve(), 2500));
@@ -17,25 +19,31 @@ const Home: NextPage = () => {
 
   const loadCheck = () => {
     setFirstLoad('false')
-  } 
+  };
 
   if(firstLoad == 'true') {
     return (
-      <Intro checkLoad={loadCheck} />
+      <div className="container">
+        <Intro checkLoad={loadCheck} />
+      </div>
     );
-  }
+  };
 
   if(loading) {
     return (
-      <p>Гружусь</p>
+      <div className="container">
+        <Loader />
+      </div>
     );
-  }
+  };
 
   return (
-    <>
-      <h1>Главная страница</h1> 
-    </>
-  )
+    <div className="container">
+      <div className="home">
+        <h1>Главная страница</h1>
+      </div>
+    </div>
+  );
 };
 
 export default Home;
